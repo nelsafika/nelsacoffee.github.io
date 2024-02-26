@@ -1,0 +1,235 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #033b70;
+    line-height: 5000%;
+    
+   
+
+}
+/* Navbar */
+nav {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    display: flex;
+    background-color: rgba(0, 34, 65, 0.9);
+    justify-content: space-around;
+    color: #fff;
+    height: 50px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.logo h1{
+   font-family: "Poppins", sans-serif;
+   font-weight: 600;
+   display: block;
+   align-items: center;
+   justify-content: space-around;
+   line-height: 1.2;
+    padding: 0px 10px;
+    font-size: 1em;
+}
+
+.logo p{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    display: block;
+    align-items: center;
+    justify-content: space-around;
+    line-height: 1.2;
+     padding: 0px 10px;
+     font-size: 0.6em;
+ }
+ 
+
+nav ul {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-around;
+    
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+nav ul li :hover {
+    color: #07212e;
+}
+
+/* Hamburger Menu */
+.menutogel {
+ display: none;
+ flex-direction: column;
+ height: 28px;
+ justify-content: space-around;
+ position: relative;
+}
+
+.menutogel input {
+    position: absolute;
+    width: 48px;
+    height: 35px;
+    left: -10px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+}
+.menutogel span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: all 0.5s;
+    
+}
+
+
+/* Menu togel animation */
+.menutogel span:nth-child(2) {
+transform-origin: 0 0;
+}
+
+.menutogel span:nth-child(4) {
+    transform-origin: 0 100%;
+    }
+
+.menutogel input:checked~span:nth-child(2){
+  transform:  rotate(45deg) translate(1px,1px);
+}
+
+.menutogel input:checked~span:nth-child(4){
+  transform:   rotate(-45deg) translate(1px,1px);
+ }
+
+ .menutogel input:checked~span:nth-child(3){
+    transform :scale(0);
+   }
+
+/* Responsive Breakpoint */
+
+/* ukuran tablet */
+@media screen and (max-width : 768px){
+    nav ul {
+        width: 50%;
+    }
+}
+
+/* ukuran mobile */
+@media screen and (max-width : 576px){
+.menutogel {
+    display: flex;
+}
+    nav ul {
+        position: fixed;
+        right: -100%;
+        top:0;
+        width: 50%;
+        height: 100vh;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        background-color:#033b70;
+        transition: all 1s;
+    }
+      
+}
+
+nav ul.slide {
+   right: 0;
+   
+}
+
+
+/* Hero section */
+.hero {
+    min-height: 100vh;  
+    height: 50%;
+    display: flex;
+    align-items: center;
+    background-image: url(sekolah.JPG); 
+    background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   position: relative;
+   justify-content: space-between;
+   z-index: -2;
+  }
+  
+  .hero::before {
+      content:'';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(0deg, rgb(3, 59, 112)3%, rgb(213, 199, 199, 0) 25%);
+  }
+
+.content {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    display: block;
+   padding: 1.4rem 10%;
+   max-width: 40rem;
+   line-height: 1.2;
+   z-index: -1;
+}
+   
+
+.content h1{
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+    font-style:normal;
+    font-size:1cm;
+    font-weight: 700;
+    text-shadow: 2px 2px 3px rgba(1, 1, 3, 0.5);
+}
+
+.content p{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-shadow: 2px 2px 3px rgba(1, 1, 3, 0.5);
+    
+}
+
+.content p span {
+    font-family: "Poppins" sans-serif;
+    font-weight: 600;
+    color: #ffffff
+
+}
+
+/* About section */
+.about{
+    padding-left: 1.4rem 7%;
+   
+   
+}
+.about h2{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+ color: #ffffff;
+}
+
+.about span{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+ color:#83b0da;
+}
+
